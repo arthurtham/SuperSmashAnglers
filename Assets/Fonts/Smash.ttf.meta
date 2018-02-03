@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 228fe38ead0d9493f81a8b27dc677f84
+timeCreated: 1517698237
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Super Smash 4.1
+  fontNames:
+  - Super Smash 4.1
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Horizontal_Speed: 5
-  m_Jump_Speed: 150
+  m_Jump_Speed: 200
   m_Rigidbody: {fileID: 50321092671917306}
   m_Player_AxisHorizontal: Horizontal_P1
   m_Player_ButtonJump: Jump_P1
