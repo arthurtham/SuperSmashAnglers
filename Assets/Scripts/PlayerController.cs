@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	//Define variables
 	public float m_Horizontal_Speed = 0;
 	public float m_Jump_Speed = 0;
 	private bool grounded = false;
 	private bool jump_delay = false;
 
+	//Define Rigidbody
 	public Rigidbody2D m_Rigidbody;
+
+	//Define Custom Axis
+	public string m_Player_AxisHorizontal;
+	public string m_Player_ButtonJump;
 
 	//Awake
 	void Awake () {
@@ -32,11 +38,11 @@ public class PlayerController : MonoBehaviour {
 		//Vector3 euler = new Vector3 (0, 100, 0);
 		//Quaternion dRotation = Quaternion.Euler (euler * Time.deltaTime);
 		// Horizontal Movement
-		if (Input.GetAxis ("Horizontal") > 0.5f) {
+		if (Input.GetAxis (m_Player_AxisHorizontal) > 0.5f) {
 			Debug.Log ("Player is moving forward!");
 			//m_Rigidbody.AddRelativeForce (Vector3.right * m_Horizontal_Speed);
 			m_Rigidbody.MoveRotation(m_Rigidbody.rotation - m_Horizontal_Speed / 2);
-		} else if (Input.GetAxis ("Horizontal") < -0.5f) {
+		} else if (Input.GetAxis (m_Player_AxisHorizontal) < -0.5f) {
 			Debug.Log ("Player is moving backward!");
 			//m_Rigidbody.AddRelativeForce (Vector3.right * -1.0f * m_Horizontal_Speed);
 			m_Rigidbody.MoveRotation(m_Rigidbody.rotation + m_Horizontal_Speed / 2);
@@ -44,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (grounded) {
 			//Vertical Movement
-			if ((Input.GetButton ("Jump")) && (!jump_delay) ) {
+			if ((Input.GetButton (m_Player_ButtonJump)) && (!jump_delay) ) {
 				Debug.Log ("Player spazzed!");
 				m_Rigidbody.AddRelativeForce (Vector3.up * m_Jump_Speed);
 				jump_delay = true;
