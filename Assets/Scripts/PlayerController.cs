@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour {
 
 	public float m_Horizontal_Speed = 0;
 	public float m_Jump_Speed = 0;
-	private bool grounded;
+	private bool grounded = false;
+	private bool jump_delay = false;
 
 	public Rigidbody2D m_Rigidbody;
 
@@ -27,24 +28,36 @@ public class PlayerController : MonoBehaviour {
 	// Physics uses FixedUpdate
 	void FixedUpdate () {
 
-		if (grounded) {
-			// Horizontal Movement
-			if (Input.GetAxis ("Horizontal") > 0.5f) {
-				Debug.Log ("Player is moving forward!");
-				m_Rigidbody.AddRelativeForce (transform.right * m_Horizontal_Speed);
-			} else if (Input.GetAxis ("Horizontal") < -0.5f) {
-				Debug.Log ("Player is moving backward!");
-				m_Rigidbody.AddRelativeForce (transform.right * -1.0f * m_Horizontal_Speed);
-			}
 
+		//Vector3 euler = new Vector3 (0, 100, 0);
+		//Quaternion dRotation = Quaternion.Euler (euler * Time.deltaTime);
+		// Horizontal Movement
+		if (Input.GetAxis ("Horizontal") > 0.5f) {
+			Debug.Log ("Player is moving forward!");
+			//m_Rigidbody.AddRelativeForce (Vector3.right * m_Horizontal_Speed);
+			m_Rigidbody.MoveRotation(m_Rigidbody.rotation - m_Horizontal_Speed / 2);
+		} else if (Input.GetAxis ("Horizontal") < -0.5f) {
+			Debug.Log ("Player is moving backward!");
+			//m_Rigidbody.AddRelativeForce (Vector3.right * -1.0f * m_Horizontal_Speed);
+			m_Rigidbody.MoveRotation(m_Rigidbody.rotation + m_Horizontal_Speed / 2);
+		}
+
+		if (grounded) {
 			//Vertical Movement
-			if (Input.GetButton ("Jump")) {
+			if ((Input.GetButton ("Jump")) && (!jump_delay) ) {
 				Debug.Log ("Player spazzed!");
-				m_Rigidbody.AddForce (transform.up * m_Jump_Speed);
+				m_Rigidbody.AddRelativeForce (Vector3.up * m_Jump_Speed);
+				jump_delay = true;
+				Invoke("JumpDelayReset",0.5f);
 			}
 
 		}
 	
+	}
+
+	//reset jump delay
+	void JumpDelayReset () {
+		jump_delay = false;
 	}
 
 	// Collision detection
