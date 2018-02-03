@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Button: {fileID: 1214597889}
-  m_ToScene: Level1
+  m_ToScene: CharacterSelect
 --- !u!1 &1008942305
 GameObject:
   m_ObjectHideFlags: 0

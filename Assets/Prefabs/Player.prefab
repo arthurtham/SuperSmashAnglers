@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4818198027291472}
   - component: {fileID: 212364231330773666}
   - component: {fileID: 50321092671917306}
-  - component: {fileID: 60645499307051566}
   - component: {fileID: 114642887436000540}
   m_Layer: 0
   m_Name: Player
@@ -37,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649034619494438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.44, y: 2.97, z: -0.04729081}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,90 +62,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &60645499307051566
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649034619494438}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 374731bdff41f4ab78858a0b3e396013, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.8, y: 2.8}
-    newSize: {x: 2.8, y: 2.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.44, y: -0.90999997}
-      - {x: 0.53, y: -0.85999995}
-      - {x: 0.77, y: -0.62}
-      - {x: 0.90999997, y: -0.38}
-      - {x: 0.95, y: -0.24}
-      - {x: 0.96999997, y: -0.12}
-      - {x: 0.98999995, y: 0.01}
-      - {x: 1.02, y: 0.29999998}
-      - {x: 0.84, y: 0.48999998}
-      - {x: 0.75, y: 0.55}
-      - {x: 0.64, y: 0.59}
-      - {x: 0.7, y: 0.78999996}
-      - {x: 0.78, y: 0.87}
-      - {x: 0.98999995, y: 0.84}
-      - {x: 1.04, y: 0.66999996}
-      - {x: 1.05, y: 0.57}
-      - {x: 1.0116596, y: 0.30370593}
-      - {x: 1.25, y: 0.51}
-      - {x: 1.25, y: 0.77}
-      - {x: 1.12, y: 0.94}
-      - {x: 1.01, y: 0.97999996}
-      - {x: 0.77, y: 0.97999996}
-      - {x: 0.74, y: 0.96999997}
-      - {x: 0.59, y: 0.83}
-      - {x: 0.53, y: 0.63}
-      - {x: 0.39, y: 0.62}
-      - {x: 0.32999998, y: 0.62}
-      - {x: 0.16, y: 0.53}
-      - {x: 0.089999996, y: 0.47}
-      - {x: -0.02, y: 0.26}
-      - {x: -0.06, y: 0.04}
-      - {x: -0.34, y: 0.19999999}
-      - {x: -0.55, y: 0.24}
-      - {x: -0.59, y: 0.16}
-      - {x: -0.39, y: -0.01}
-      - {x: -0.48999998, y: -0.14999999}
-      - {x: -0.52, y: -0.26999998}
-      - {x: -0.69, y: -0.32}
-      - {x: -0.91999996, y: -0.17}
-      - {x: -1.11, y: -0.08}
-      - {x: -1.16, y: -0.08}
-      - {x: -1.18, y: -0.11}
-      - {x: -1.18, y: -0.14999999}
-      - {x: -1.01, y: -0.35}
-      - {x: -1.03, y: -0.45}
-      - {x: -0.96, y: -0.51}
-      - {x: -1, y: -0.59999996}
-      - {x: -0.97999996, y: -0.78999996}
-      - {x: -0.9, y: -0.83}
-      - {x: -0.83, y: -0.68}
-      - {x: -0.71999997, y: -0.59}
-      - {x: -0.48, y: -0.76}
-      - {x: -0.61, y: -0.91999996}
-      - {x: -0.57, y: -1.02}
-      - {x: -0.52, y: -1.03}
-      - {x: -0.35, y: -1.03}
-      - {x: -0.29999998, y: -1.02}
-      - {x: -0.14, y: -0.90999997}
-      - {x: 0.089999996, y: -0.94}
-      - {x: 0.25, y: -0.94}
 --- !u!114 &114642887436000540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,6 +76,8 @@ MonoBehaviour:
   m_Horizontal_Speed: 5
   m_Jump_Speed: 150
   m_Rigidbody: {fileID: 50321092671917306}
+  m_Player_AxisHorizontal: Horizontal_P1
+  m_Player_ButtonJump: Jump_P1
 --- !u!212 &212364231330773666
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -192,10 +109,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1476187385
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9f0e2501a17bc4df080d721c0fa6e9f1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,5 +120,5 @@ SpriteRenderer:
   m_Size: {x: 2.8, y: 2.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
