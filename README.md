@@ -4,7 +4,7 @@ One stock. No items.<br>
 Angler Only. Final Destination.<br>
 And just as slow as Brawl.<br>
 HackUCI 2018 Submission.<br>
-[Play Now!](www.ics.uci.edu/~thamaj/sandbox/ssa/)
+[Play Now!](http://www.ics.uci.edu/~thamaj/sandbox/ssa/)
 
 ## I'm developing a project called
 Super Smash Anglers. Duh.
