@@ -85,9 +85,9 @@ public class ButtonPlayerSelect : MonoBehaviour {
 		case 2:
 			return "The Great Carl Reef";
 		case 3:
-			return "Jason";
+			return "The Burger";
 		case 4:
-			return "Milan";
+			return "She's an Angel";
 		}
 		return "null";
 	}
