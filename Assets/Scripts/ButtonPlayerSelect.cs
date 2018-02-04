@@ -10,7 +10,7 @@ public class ButtonPlayerSelect : MonoBehaviour {
 	public static ButtonPlayerSelect instance;
 
 	private int playerId;
-	private static int playerIdMax = 2;
+	private static int playerIdMax = 4;
 	public int m_playerIdDefault;
 	public int player;
 	private static int[] playerIds = new int[playerIdMax+1];
@@ -68,6 +68,10 @@ public class ButtonPlayerSelect : MonoBehaviour {
 			return "Jessica";
 		case 2:
 			return "Carl";
+		case 3:
+			return "Jason";
+		case 4:
+			return "Milan";
 		} 
 		return "null";
 	}
@@ -80,6 +84,10 @@ public class ButtonPlayerSelect : MonoBehaviour {
 			return "Jess the Mess";
 		case 2:
 			return "The Great Carl Reef";
+		case 3:
+			return "Jason";
+		case 4:
+			return "Milan";
 		}
 		return "null";
 	}

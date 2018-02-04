@@ -26,19 +26,19 @@ public class WinnerSpriteController : MonoBehaviour {
 			WinController.instance.GetWinPlayer ()]
 			)
 		);
-		Debug.Log ("Sprites/Players/" +
-		ButtonPlayerSelect.instance.idToString (
-			ButtonPlayerSelect.instance.getPlayerIds () [
-				WinController.instance.GetWinPlayer ()]
-		)
-		);
 
 		go.GetComponent<SpriteRenderer>().sprite = m_WinnerSprite;
 
 		//Now set the text
-		this.GetComponentInChildren<Text> ().text = "Player " +
-			(WinController.instance.GetWinPlayer() + 1).ToString() + " wins!";
-		
+		//this.GetComponentInChildren<Text> ().text = "Player " +
+		//	(WinController.instance.GetWinPlayer() + 1).ToString() + " wins!";
+		this.GetComponentInChildren<Text> ().text = "\"" +
+		ButtonPlayerSelect.instance.idToString (
+			ButtonPlayerSelect.instance.getPlayerIds () [
+				WinController.instance.GetWinPlayer ()]
+		) + "\" (Player " +
+		(WinController.instance.GetWinPlayer () + 1).ToString () +
+		") wins!";
 
 	}
 	// Update is called once per frame
