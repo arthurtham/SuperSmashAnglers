@@ -53,7 +53,9 @@ public class ButtonPlayerSelect : MonoBehaviour {
 		Debug.Log ("./Sprites/Players/" + playerName + ".png");
 		Sprite toLoad = Resources.Load<Sprite> ("Sprites/Players/"+playerName+"");
 		m_Button.GetComponent<Image> ().sprite = toLoad;
-		m_Button.GetComponentInChildren<Text> ().text = "Player "+(player+1).ToString()+": "+playerName;
+		m_Button.GetComponentInChildren<Text> ().text = "Player "+(player+1).ToString()
+			+": "+playerName+
+			"\n\""+idToNickname(playerId)+"\"";
 		playerIds [player] = playerId;
 
 	}
@@ -67,6 +69,18 @@ public class ButtonPlayerSelect : MonoBehaviour {
 		case 2:
 			return "Carl";
 		} 
+		return "null";
+	}
+
+	public string idToNickname(int id) {
+		switch (id) {
+		case 0:
+			return "Finding Gerald";
+		case 1:
+			return "Jess the Mess";
+		case 2:
+			return "The Great Carl Reef";
+		}
 		return "null";
 	}
 }
