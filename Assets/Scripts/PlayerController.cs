@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -68,10 +69,28 @@ public class PlayerController : MonoBehaviour {
 
 	// Collision detection
 	void OnCollisionEnter2D (Collision2D other) {
+
+		//Grounded
 		if (other.gameObject.CompareTag("Ground")) {
 			Debug.Log ("Just entered the ground!");
 			this.grounded = true;
 		}
+
+		//DeadArea
+		if ( (!WinController.instance.GetWinState()) && 
+			(other.gameObject.CompareTag("DeadArea"))) {
+			if (this.gameObject.CompareTag("Player1")) { //Player 1 lost
+				WinController.instance.SetWinState(true);
+				WinController.instance.SetWinPlayer (1);
+				Debug.Log("Player 2 wins!");
+			} else if (this.gameObject.CompareTag("Player2")) {//Player 2 lost
+				WinController.instance.SetWinState(true);
+				WinController.instance.SetWinPlayer (0);
+				Debug.Log("Player 1 wins!");
+			}
+			SceneManager.LoadScene ("Winner", LoadSceneMode.Single);
+		}
+
 	}
 
 	void OnCollisionExit2D (Collision2D other) {
@@ -80,4 +99,5 @@ public class PlayerController : MonoBehaviour {
 			this.grounded = false;
 		}
 	}
+
 }
