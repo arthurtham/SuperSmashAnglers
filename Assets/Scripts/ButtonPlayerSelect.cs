@@ -16,6 +16,8 @@ public class ButtonPlayerSelect : MonoBehaviour {
 	private static int[] playerIds = new int[playerIdMax+1];
 	public Button m_Button;
 
+	public AudioSource[] sources = new AudioSource[playerIdMax+1];
+
 	void Awake() {
 		instance = this;
 	}
@@ -32,6 +34,7 @@ public class ButtonPlayerSelect : MonoBehaviour {
 	{
 		nextPlayer ();	
 		updateSprite ();
+		playAudioById (playerId);
 	}
 
 	public int[] getPlayerIds() {
@@ -58,6 +61,10 @@ public class ButtonPlayerSelect : MonoBehaviour {
 			"\n\""+idToNickname(playerId)+"\"";
 		playerIds [player] = playerId;
 
+	}
+		
+	public void playAudioById(int id) {
+		sources [id].Play ();
 	}
 
 	public string idToString(int id) {
