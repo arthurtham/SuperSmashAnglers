@@ -19,3 +19,6 @@ Arthur. Just Arthur. Only Arthur.
 This game is dedicated to my littles of the Angler family line. The people represented in this game gave their full permission for me to use their wonderful faces to truly emboy the spirit of the Angler.
 
 #DING
+
+## Some important links
+[Play now!](http://www.ics.uci.edu/~thamaj/sandbox/ssa/)
