@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 
 	//Define Custom Axis
 	public string m_Player_AxisHorizontal;
+	public string m_Player_AxisVertical;
 	public string m_Player_ButtonJump;
 
 	//Awake
@@ -49,6 +50,15 @@ public class PlayerController : MonoBehaviour {
 				Invoke("JumpDelayReset",0.5f);
 			}
 
+		}
+
+		//Detect if the rotational button (down) is pressed
+		if (Input.GetButtonDown (m_Player_AxisVertical)) {
+			Debug.Log ("Player made a rotation!");
+			Vector3 newVector = new Vector3 (this.gameObject.transform.localScale.x * -1,
+				this.gameObject.transform.localScale.y,
+				this.gameObject.transform.localScale.z);
+			this.gameObject.transform.localScale = newVector;
 		}
 	
 	}

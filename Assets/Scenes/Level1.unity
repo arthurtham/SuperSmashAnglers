@@ -2065,7 +2065,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -29}
-  m_SizeDelta: {x: 329.6, y: 49.5}
+  m_SizeDelta: {x: 500, y: 49.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564651790
 MonoBehaviour:
@@ -2099,9 +2099,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player 1: [A][D] Rotate, [W] Leap
+  m_Text: 'Player 1: [A][D] Rotate, [W] Leap, [S] Flip Around
 
-    Player 2: [<][>] Rotate, [^] Leap'
+    Player 2: [<][>] Rotate, [^] Leap, [v] Flip Around'
 --- !u!222 &1564651791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2561,6 +2561,11 @@ Prefab:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 114642887436000540, guid: a56105c34c3604347b6bc2a79fed1d82,
+        type: 2}
+      propertyPath: m_Player_AxisVertical
+      value: Vertical_P2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a56105c34c3604347b6bc2a79fed1d82, type: 2}
   m_IsPrefabParent: 0
@@ -2645,10 +2650,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1649034619494438, guid: a56105c34c3604347b6bc2a79fed1d82, type: 2}
       propertyPath: m_Name
-      value: Player1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1649034619494438, guid: a56105c34c3604347b6bc2a79fed1d82, type: 2}
-      propertyPath: m_TagString
       value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

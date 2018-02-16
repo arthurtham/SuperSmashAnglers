@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114642887436000540}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649034619494438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.447738, y: 3.18205, z: -89.74287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Jump_Speed: 400
   m_Rigidbody: {fileID: 50321092671917306}
   m_Player_AxisHorizontal: Horizontal_P1
+  m_Player_AxisVertical: Vertical_P1
   m_Player_ButtonJump: Jump_P1
 --- !u!212 &212364231330773666
 SpriteRenderer:
