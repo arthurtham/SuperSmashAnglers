@@ -56,6 +56,7 @@ public class CountdownText : MonoBehaviour {
 			p2.GetComponent<Rigidbody2D> ().isKinematic = false;
 			txt.text = "GO!";
 			as_go.Play ();
+			TimerController.StartTimer ();
 			break;
 		case 4:
 			Destroy(this.gameObject); //Ends execution
