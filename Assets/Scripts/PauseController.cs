@@ -12,6 +12,9 @@ public class PauseController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		instance = this;
+		Time.timeScale = 1;
+		paused = false;
+		panel = false;
 	}
 
 	public void SwitchPause(){

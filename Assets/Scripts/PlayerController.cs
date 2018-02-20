@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour {
 				WinController.instance.SetWinPlayer (0);
 				Debug.Log("Player 1 wins!");
 			}
+			TimerController.StopTimer ();
 			SceneManager.LoadScene ("Winner", LoadSceneMode.Single);
 		}
 

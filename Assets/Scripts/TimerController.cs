@@ -29,7 +29,7 @@ public class TimerController : MonoBehaviour {
 
 	public static void StopTimer() {
 		running = false;
-		Debug.Log ("The timer is stop!");
+		Debug.Log ("The timer is stopped!");
 	}
 
 	public static void StartTimer() {
@@ -47,6 +47,7 @@ public class TimerController : MonoBehaviour {
 			//Player 1 wins by default
 			WinController.instance.SetWinState(true);
 			WinController.instance.SetWinPlayer (0);
+			TimerController.StopTimer ();
 			Debug.Log("Player 1 wins!");
 			SceneManager.LoadScene ("Winner", LoadSceneMode.Single);
 		}
